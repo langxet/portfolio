@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+<link href="css/regisform.css" rel="stylesheet">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/regis.js"></script>
+
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+     <h1>Thank you for your interest in our flower shop, please fill out the form!</h1>
+		
+	</div>
+	<div class="content">
+	<div class="main">
+	<h1><u>Signup</u></h1>
+		<form action="process.php" method="post" name="signup" id="signup">
+			<div>
+				<label for="fname" class="label">First Name </label>
+				<input name="fname" type="text" class="required" id="fname" title="Please type your first name.">
+			</div>
+            <div>
+				<label for="lname" class="label">Last Name </label>
+				<input name="lname" type="text" class="required" id="lname" title="Please type your last name.">
+			</div>
+            
+			<div>
+				<label for="email" class="label">E-mail Address</label>
+				<input name="email" type="text" id="email">
+			</div>
+             <div>
+				<label for="username" class="label">Username </label>
+				<input name="username" type="text" class="required" id="username" title="username required!">
+			</div>
+			<div>
+				<label for="password" class="label">Password</label>
+				<input name="password" type="password" id="password">
+			</div>
+			<div>
+				<label for="confirm_password" class="label">Confirm Password</label>
+				<input name="confirm_password" type="password" id="confirm_password">
+			</div>
+			<div><span class="label">Favorite Occation?</span>
+				<input name="valentine" type="checkbox" id="Valetine" value="Valentine" class="required" title="Please check one.">
+				<label for="Valentine">Valentine</label>
+				
+				<input name="favorite" type="checkbox" id="birthday" value="birthday">
+				<label for="birthday">Birthday</label>
+			</div>
+			<div>
+				<label for="dob" class="label">Date of birth</label>
+				<input name="dob" type="text" id="dob" class="date" title="Please type your date of birth using this format: 01/19/2000">
+			</div>
+			<div>
+				<label for="paymentmethod" class="label">Payment Method Prefer</label>
+				<select name="paymentmethod" id="region" class="required" title="Please choose one">
+					<option value="">--Please select one--</option>
+					<option value="Cash">Cash</option>
+					<option value="Credit">Credit/Depit Card</option>
+					<option value="Check">Check</option>
+					<option value="Giftcard">Gift Card</option>
+				</select>
+			</div>
+			<div>
+				<label for="comments" class="label">Comments</label>
+				<textarea name="comments" cols="40" rows="10" id="comments"></textarea>
+			</div>
+			<div class="labelBlock">Would you like to receive an e-mail from
+				us? 
+				<input  type="radio" name="mail" id="yes" value="yes">
+				
+</div>
+			<div>
+				<input type="submit" name="submit" id="submit" value="Submit Form">
+			</div>
+		</form>
+		</div>
+	</div>
+<div class="footer">
+		<p>Already a member? <a href="login.html">Please log in to your account</a></p>
+
+</div>
+</div>
+</body>
+</html>

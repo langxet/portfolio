@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<!--external stylesheet link here-->
+<link href="css/styles1.css" rel="stylesheet">
+<link href="anythingSlider/anythingslider.css" rel="stylesheet">
+<link href="fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+<link href="css/contact.css" rel="stylesheet">
+
+<!--external javascript and jquery link here-->
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="anythingSlider/jquery.anythingslider.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.js"></script>
+<script src="js/project.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/contact.js"></script>
+
+<!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
+
+<script>
+$(document).ready(function() {
+	$('#external').fancybox({
+	});
+	$('#register').fancybox({
+	});
+	$('#external2').fancybox({
+	});
+});
+
+</script>
+</head>
+
+<body id="article">
+<div class="pageWrapper">
+<header>
+<nav class="clear">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="product.html">Products</a></li>
+<li><a href="caretip.html">Care Tips</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<div id="log">
+<li><a id="external" href="login.html" class="iframe">Login</a></li>
+<li><a id="register" href="registration.html" class="iframe">Register</a></li>
+<li><form method="get" action="search" id="search">
+  <inputt name="q" type="text" size="40" placeholder="Search..." />
+</form></li></div>
+</ul>
+</nav>
+
+
+
+<!--logo and extra-->
+<div id="logo">
+<h1>Pro Flower Shop</h1>
+	
+</div>
+
+</header>
+<div class="contentWrapper">
+
+
+
+
+<!-- main content goes here -->
+<article class="main">
+
+<div class="wrapper">
+
+<div id="ack"></div>
+<div class="header">
+		<p class="logo">Please fill out Contact form below!</p>
+	</div>
+<div id="formwrapper">
+<form id="myForm" action="contact.php" method="post">
+<label for ="Name">Name:</label>
+<input name="name" type="text" class="required" id="name" title="Please type your name."><br /><br />
+<label for="email">Email:</label>
+<input type="text" name="email" id="email"><br /> <br />
+<div class="labelBlock">Would you like to receive an offer e-mail from
+				us? 
+				<input  type="radio" name="mail" id="yes" value="yes">
+				
+</div>
+<label for="comments" class="label"></label>
+<textarea placeholder ="comment..."name="comments" cols="40" rows="10" id="comments"></textarea><br />
+
+<input type="submit" name="submit" id="submit" value="Contact Us">
+</form>
+</div>
+      
+  </article>
+<!-- sidebar goes here -->
+<aside class="sidebar2">
+  <img src="images/710_purple_calla_lilies_144723256.jpg">
+</aside>
+</div>
+
+
+
+<br clear="all">
+<footer>
+  
+ <br clear="all">   
+<div class="copyright" style="width:1200px;color:#666; padding-top:15px; text-align:center;">&copy; 2014 Pro Flower Shop - Denver, Colorado - Your Florist of Choice&reg; - <a href="term.html" class="copylink">Terms of Use</a> - <a href="aboutus.html" class="copylink">Privacy and Security</a> </div>
+</footer>
+
+</div>
+</body>
+</html>

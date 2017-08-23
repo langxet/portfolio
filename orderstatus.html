@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>product overview</title>
+
+<link href="css/over.css" rel="stylesheet">
+
+<style>
+.tabs {
+	
+margin: 0;
+	
+padding: 0;	
+	
+zoom : 1;
+
+}
+
+.tabs li 
+{
+	
+float: left;
+	
+list-style: none;
+	
+padding: 0;
+	
+margin: 0;
+
+}
+
+.tabs a 
+{
+	
+display: block;
+	
+text-decoration: none;
+	
+padding: 3px 5px;
+	
+background-color: rgb(110,138,195);
+	
+margin-right: 10px;
+	
+border: 1px solid rgb(153,153,153);
+	
+margin-bottom: -1px;
+
+}
+
+.tabs .active
+ {
+	
+border-bottom: 1px solid white;
+	
+background-color: white;
+	
+color: rgb(51,72,115);
+	
+position: relative;
+
+}
+
+
+.panelContainer 
+{
+	
+clear: both;
+	
+margin-bottom: 25px;	
+	
+border: 1px solid rgb(153,153,153);	
+	
+background-color: white;
+	
+padding: 10px;
+
+}
+
+
+.panel h2 
+{
+	
+color: rgb(57,78,121);
+	
+text-shadow: none;		
+
+}
+
+.panel p 
+{
+	
+color: black;	
+
+}
+
+</style>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+
+$('.tabs a').click(function() {
+	  // save $(this) in a variable for efficiency
+		
+var $this = $(this);
+		
+		
+		
+$('.panel').hide();
+	  // hide panels	
+$('.tabs a.active').removeClass('active');
+   // add active state to new tab
+		
+$this.addClass('active').blur();	
+ // retrieve href from link (is id of panel to display)
+		var panel = $this.attr('href');
+		// show panel
+		
+$(panel).fadeIn(500);
+		
+		// don't follow link down page
+		
+return(false);
+	}); // end click
+	 
+	// open first tab
+	
+$('.tabs li:first a').click();
+
+}); // end ready
+
+</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+	
+
+	
+<div class="content">
+		
+<div class="main">
+			
+
+		  
+<div class="tabbedPanels">
+	<h1>Order Status</h1>		
+<ul class="tabs">
+  
+<li><a href="#panel1" tabindex="1">Product Overview</a></li>
+  
+<li><a href="#panel2" tabindex="2">Care Intruction</a></li>
+  
+<li><a href="#panel3" tabindex="3">Shipping</a></li>
+
+</ul>
+
+<div class="panelContainer">
+<div id="panel1" class="panel">
+<h2>Red Roses, 30 Stems</h2>
+
+
+<p>
+<table><tr>
+<td><img src="images/450_rose_peach_89153628.jpg" width="450" height="450" alt="Peach Rose" /></td><td class="more"><div id="col_1" role="main">
+		
+			<div class="cols lg_margin">
+				<div class="col swap lg_padding_l">
+					<h1>Rainbow Rose Collection</h1>
+					<p class="h2 inline_block">$29.95</p>
+					<p class="cat_num">Item # 724-5354</p>
+					
+					<p>Thirty long stem roses in five brilliant colors make a stunning gift for that someone special. Our roses are carefully packged and shipped the same day they are cut to ensure long-lasting blooms.</p>
+					<ul class="no_ml">
+						<li>6 Peach Blush roses</li>
+						<li>6 Delicate Pink roses</li>
+						<li>6 Deep Red roses</li>
+						<li>6 Snow White roses</li>
+						<li>6 Sunny Yellow roses</li>
+					</ul>
+					
+				</div></td></tr></table>
+ </p>
+
+
+
+</div>
+
+<div id="panel2" class="panel">
+<h2>Surpise note</h2>
+Surprise the one who makes you smile, or express yourself perfectly with this stunning bouquet of two dozen fresh red roses. This elegant arrangement is a truly thoughtful gift that shows how much you care.
+<h3 class="shadow">Care Instructions</h3>
+					<p class="note">Your fresh roses will arrive with a Chil-Pak to guarantee their freshness. As soon you open the package, use sharp scissors or a knife to cut 1 inch off the bottom of each stem,<br/> and immediately place the freshly cut rose into cool water in the included vase. Change the water daily to keep your roses fresh longer.</p>
+</div>
+<div id="panel3" class="panel">
+<p>
+<form action="#" method="get" id="checkout_form">
+<fieldset>
+							<legend class="h3 shadow uppercase domine_bold">Promo <span class="normalcase">or</span> Coupon Code</legend>
+							<label for="promo">Enter code to apply a discount:</label>
+							<div class="f_row">
+								<input type="text" class="text small_medium no_ml" name="promo" id="promo" placeholder="Enter Code Here" />
+								<input type="submit" class="checkout alt" value="Apply" />
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend class="h3 uppercase shadow domine_bold">Ship To:</legend>
+							<div class="f_row">
+								<label for="firstName">First Name:</label>
+								<input type="text" class="text medium" name="firstName" id="firstName" required />
+							</div>
+							<div class="f_row">
+								<label for="lastName">Last Name:</label>
+								<input type="text" class="text medium" name="lastName" id="lastName" required />
+							</div>
+							<div class="f_row">
+								<label for="address1">Address Line 1:</label>
+								<input type="text" class="text large" name="address1" id="address1" required />
+							</div>
+							<div class="f_row">
+								<label for="address2">Address Line 2:</label>
+								<input type="text" class="text large" name="address2" id="address2" />
+								<span class="optional">(optional)</span>
+							</div>
+							<div class="f_row">
+								<label for="zipCode">ZIP Code:</label>
+								<input type="text" class="text small" name="zipCode" id="zipCode" required />
+							</div>
+							<div class="f_row">
+								<label for="city">City:</label>
+								<input type="text" class="text medium" name="city" id="city" required />
+								<label for="state">State:</label>
+								<select id="state" class="auto">
+									<option value="" selected="selected"></option>
+									<option value="AL">AL</option>
+									<option value="AK">AK</option>
+									<option value="AZ">AZ</option>
+									<option value="AR">AR</option>
+									<option value="CA">CA</option>
+									<option value="CO">CO</option>
+									<option value="CT">CT</option>
+									<option value="DE">DE</option>
+									<option value="DC">DC</option>
+									<option value="FL">FL</option>
+									<option value="GA">GA</option>
+									<option value="HI">HI</option>
+									<option value="ID">ID</option>
+									<option value="IL">IL</option>
+									<option value="IN">IN</option>
+									<option value="IA">IA</option>
+									<option value="KS">KS</option>
+									<option value="KY">KY</option>
+									<option value="LA">LA</option>
+									<option value="ME">ME</option>
+									<option value="MD">MD</option>
+									<option value="MA">MA</option>
+									<option value="MI">MI</option>
+									<option value="MN">MN</option>
+									<option value="MS">MS</option>
+									<option value="MO">MO</option>
+									<option value="MT">MT</option>
+									<option value="NE">NE</option>
+									<option value="NV">NV</option>
+									<option value="NH">NH</option>
+									<option value="NJ">NJ</option>
+									<option value="NM">NM</option>
+									<option value="NY">NY</option>
+									<option value="NC">NC</option>
+									<option value="ND">ND</option>
+									<option value="OH">OH</option>
+									<option value="OK">OK</option>
+									<option value="OR">OR</option>
+									<option value="PA">PA</option>
+									<option value="RI">RI</option>
+									<option value="SC">SC</option>
+									<option value="SD">SD</option>
+									<option value="TN">TN</option>
+									<option value="TX">TX</option>
+									<option value="UT">UT</option>
+									<option value="VT">VT</option>
+									<option value="VA">VA</option>
+									<option value="WA">WA</option>
+									<option value="WV">WV</option>
+									<option value="WI">WI</option>
+									<option value="WY">WY</option>
+								</select>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend class="h3 uppercase shadow domine_bold">Gift Message:</legend>
+							<div class="f_row">
+								<label for="message">Message:</label>
+								<textarea class="large" name="message" id="message"></textarea>
+								<span class="optional">(optional)</span>
+							</div>
+						</fieldset>
+						
+						<fieldset>
+							<legend class="h3 uppercase shadow domine_bold">Shipping Method:</legend>
+							<div class="rc no_mb">
+								<ul>
+									<li><input type="radio" name="shipping" id="shipping1" value="0.00" checked /> <label for="shipping1"><span>FedEx 2-Day Service</span> $ FREE</label></li>
+									<li><input type="radio" name="shipping" id="shipping2" value="29.95" /> <label for="shipping2"><span>FedEx Next Day</span> $29.95</label></li>
+									<li><input type="radio" name="shipping" id="shipping3" value="18.95" /> <label for="shipping3"><span>UPS 2-Day Service</span> $18.95</label></li>
+									<li><input type="radio" name="shipping" id="shipping4" value="23.95" /> <label for="shipping4"><span>UPS Next Day</span> $23.95</label></li>
+								</ul>
+							</div>
+						</fieldset>
+										<fieldset>
+							<legend class="h3 uppercase shadow domine_bold">Delivery Date:</legend>
+							<div class="f_row">
+								<label for="date">Date:</label>
+								<input type="date" name="date" id="date" class="text date_time medium" required />
+							</div>
+						</fieldset>
+
+			</form></p>			
+
+</div>
+
+
+
+
+		
+
+	
+<div class="footer">
+		
+
+	</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header h1 {
+  margin: -15px -42px 21px;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+.labelBlock{color:#FFF;}
+
+.label{color:#FFF;}
+.footer
+{
+	margin-left: 50px;
+	font-weight:bold; 
+	color:#FC0;
+	}
+	.footer a
+	{
+	  text-decoration:none;
+	}
+	.footer a:hover{
+		text-decoration:underline;
+		color:#606;
+		}
+		#submit
+		{
+			border:2px solid #F00;
+			border-radius:25px;
+			margin-left: 120px;
+			background-color:#FF0;
+			
+			}
+		
+.wrapper
+	{
+		
+ border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#99F;
+width:580px;
+height:800px;
+border-radius:15px;
+box-shadow: 10px 10px 5px #888888;
+	}
+	form {
+		width:500px;
+	border:2px;
+	padding: 10px 10px 10px 10px;
+}
+label {
+	display: inline-block;
+	width: 100px;
+	text-align:right;
+	margin: 0 15px 0 0;
+	color: white;
+}
+input {
+	font-size: 14px;	
+}
+
+#signup label.error {
+  font-size: 0.8em;
+  color: #600;
+  font-weight: bold;
+  display: block;
+  margin-left: 120px;
+}
+#signup  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 1px solid red;
+}

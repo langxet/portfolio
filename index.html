@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pro Flower Shop</title>
+<!--external stylesheet link here-->
+<link href="css/styles.css" rel="stylesheet">
+<link href="anythingSlider/anythingslider.css" rel="stylesheet">
+<link href="fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+
+<!--external javascript and jquery link here-->
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="anythingSlider/jquery.anythingslider.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.js"></script>
+<script src="js/project.js"></script>
+
+<!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
+<style>
+#logo
+{
+	padding: 10px;
+	margin:0 auto;
+}
+.section li{
+	display:inline;
+	}
+.sidebar2 a
+{
+	color: #333;
+  font-size: 18px;
+	text-decoration:none;	
+}
+.sidebar2 a:hover
+{
+	font-weight:bold;
+	color:#069;
+	display:block;
+}
+.sidebar2 a:visited{color:#606;}
+#divide 
+{
+	
+	 border-bottom: 2px solid #86A100;
+	 padding: 0 auto;
+}
+P{
+	font-size: 10px;
+	color:#F96;
+	font-weight:bold;
+}
+
+.copyright
+{
+	margin-bottom: 5px;
+    margin-top: 5px;
+	font-size: .8em;	
+	padding: 10px 10px 10px 10px;
+	background-color: black;
+	color: rgb(204,204,204);
+	
+	}
+#search 
+{
+  margin-top:3px;
+  
+}
+
+
+#search input[type="text"] {
+    background: url(search-dark.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #777;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+   
+   
+    }
+
+#log{margin-left: 920px;}
+	
+
+</style>
+<script>
+$(document).ready(function() {
+	$('#external').fancybox({
+	});
+	$('#register').fancybox({
+	});
+	$('#external2').fancybox({
+	});
+});
+
+</script>
+</head>
+
+<body id="article">
+<div class="pageWrapper">
+<header>
+<nav class="clear">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="product.html">Products</a></li>
+<li><a href="caretip.html">Care Tips</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<div id="log">
+<li><a id="external" href="login.html" class="iframe">Login</a></li>
+<li><a id="register" href="registration.html" class="iframe">Register</a></li>
+<li><form method="get" action="search" id="search">
+  <input name="q" type="text" size="40" placeholder="Search..." />
+</form></li></div>
+</ul>
+</nav>
+
+
+
+<!--logo and extra-->
+<div id="logo">
+<h1>Pro Flower Shop</h1>
+	
+</div>
+
+</header>
+<div class="contentWrapper">
+
+
+
+
+<!-- main content goes here -->
+<article class="main">
+
+   
+      <h1>Beautiful Flowers, Artfully Arranged</h1>
+      <div id="slider">
+        <div><a href="page1.html">
+        <p class="overlay large">It must be Spring! Delicate daffodils have arrived!</p>
+			
+        <img src="images/slide1.jpg" width="850" height="450" alt="Pumpkin"></a></div>
+        <div><a href="page2.html">
+        <p class="overlay large">Beautiful arrangements for any occasion.</p>
+							
+        <img src="images/slide2.jpg" width="850" height="450" alt="Grapes"></a></div>
+        <div><a href="page3.html">
+        <p class="overlay large">Every party needs a splash of color!</p>
+						
+        <img src="images/slide3.jpg" width="850" height="450" alt="Various"></a></div>
+      </div>
+  <div id="divide"><h1>Our Most Popular Flowers</h1></div>
+  <nav>
+    <ul>
+      <li>
+	<a href="#">
+		<img src="images/280_heirloom_pink_roses_153499160.jpg" width="280" height="280" alt="Heirloom Roses" />
+		<h3 class="h4">Heirloom Roses</h3>
+		<p class="reset">From $39.95 <b class="alert"><span>Sale</span></b></p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/280_irises_121549009.jpg" width="280" height="280" alt="Purple Irises" />
+							<h3 class="h4">Lovely Irises</h3>
+							<p class="reset">From $15.95</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/280_white_red_tulips_160382424.jpg" width="280" height="280" alt="White Tipped Tulips" />
+							<h3 class="h4">Tantalizing Tulips</h3>
+							<p class="reset">From $29.95</p>
+						</a>
+					</li>
+                   
+				</ul>
+		</nav>
+        <br clear="all">
+<div id="divide"><h1>Bouquets &amp; Arrangements</h1></div>
+<nav>
+<ul>
+<li>
+						<a href="#">
+							<img src="images/200_birthday_163159054.jpg" width="200" height="200" alt="Pink Birthday" />
+							<h3 class="h4">Birthdays</h3>
+							<p class="reset">From $19.95</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/200_arrangement_94972439.jpg" width="200" height="200" alt="Sunflower Bouquet" />
+							<h3 class="h4">Anniversaries</h3>
+							<p class="reset">From $25.95</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/200_purple_daisy_rose104274224.jpg" width="200" height="200" alt="Purple Daisy Bouquet" />
+							<h3 class="h4">Someone Special</h3>
+							<p class="reset">From $22.95 <b class="alert"><span>New!</span></b></p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/200_arrangement_163066655.jpg" width="200" height="200" alt="Bucket o' Mums" />
+							<h3 class="h4">Mums for Mom</h3>
+							<p class="reset">From $19.95</p>
+						</a>
+					</li>
+                    
+				</ul>
+		</nav>
+     <br clear="all">
+<div id="divide"><h1>Something Special</h1></div>
+<nav>
+<ul>
+
+<li>
+<a href="#">
+	<img src="images/450_2_maidenhair_fern_166585539.jpg" width="450" height="200" alt="Maidenhair Fern" />
+						</a>
+						<a href="#">
+							
+							<img src="images/450_2_tulip_field_154321412.jpg" width="450" height="200" alt="Fresh Tulips" />
+						</a>
+                     <a href="#">
+<img src="images/450_tulips_daffodils_163271740.jpg" width="450" height="200" alt="Custom Bouquet" /></a>
+<a href="#">
+<img src="images/710_red_yellow_roses_119752732.jpg" width="450" height="200" alt="Custom Bouquet" /></a>
+  </li>
+ </ul>
+</nav>
+   
+</article>
+<!-- sidebar goes here -->
+<aside class="sidebar2">
+<h2>Navigation </h2>
+  <ul>
+ 
+    <li><a id="external2" href="orderstatus.html" class="iframe">Order Status</a></li>
+    <li><a href="viewcart.html">View Cart</a></li>
+    
+  </ul>
+  <h2>Communication</h2>
+  <p>Sign up for email exclusive: </p>
+  <form method="post" id= "email">
+  <input text="email" placeholder="enter your email..." type="textfield">
+  <input type="image" align="absmiddle" src="images/btn-emailsubmit.gif" onClick=" " />
+  </form><br>
+   <div class="follow">Follow Us</div><br>
+     <nav>
+        <ul>
+          <li><a href="www.facebook.com/1900flowers.com"><img src="images/logo-fb.gif"></a></li>
+         
+          <li><a href="www.facebook.com/1900flowers.com"><img src="images/logo-twitter.gif"></a></li>
+          <li><a href="www.facebook.com/1900flowers.com"><img src="images/logo-youtube.gif"></a></li>
+          <li><a href="#"><img src="images/follow-pinterest-button.png"></a></li>
+          </ul>
+      </nav>    
+</aside>
+</div>
+
+
+
+<br clear="all">
+<footer>
+
+<div class="copyright" style="width:1200px;color:#666; padding-top:15px; text-align:center;">&copy; 2014 Pro Flower Shop - Denver, Colorado - Your Florist of Choice&reg; - <a href="term.html" class="copylink">Terms of Use</a> - <a href="aboutus.html" class="copylink">Privacy and Security</a> </div>
+</footer>
+
+</div>
+</body>
+</html>

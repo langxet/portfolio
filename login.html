@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title> 
+<style>
+.logo
+{
+  font-size:24px;
+  font-weight:bold;
+  color:#3FF	
+}
+body{
+	margin: 100px 100px 100px 100px;
+	background-color:#CCC;
+	
+}
+.title h1 {
+  margin: -15px -42px 21px;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+form {
+	border:2px;
+	padding: 10px 10px 10px 10px;
+}
+label {
+	display: inline-block;
+	width: 100px;
+	text-align:right;
+	margin: 0 15px 0 0;
+	color: white;
+}
+input {
+	font-size: 14px;	
+}
+#button {
+	margin-left: 120px;	
+}
+.footer
+{
+	margin-left: 50px;
+	font-weight:bold; 
+	color:#FC0;
+	}
+	.footer a
+	{
+	  text-decoration:none;
+	}
+	.footer a:hover{
+		text-decoration:underline;
+		color:#606;
+		}
+.wrapper
+	{
+		
+ border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#99F;
+width:420px;
+border-radius:15px;
+box-shadow: 10px 10px 5px #888888;
+	}
+	#provide{color:#CCC;}
+</style>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('#login').submit(function() {
+   var formData = $(this).serialize();
+      $.get('login.php',formData,processData).error('ouch');
+      function processData(data) {
+		  console.log(data);
+        if (data=='pass') {
+           $('#content').html('<p>You have successfully logged in!</p>');
+        } else {
+           if (! $('#fail').length) {
+             $('#formwrapper').prepend('<p id="fail">Incorrect login information. Please try again</p>');
+           }
+         }
+       } // end processData
+       return false;
+   }); // end submit
+		
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="title">
+	<h1>Please provide your  information to log in</h1>
+	</div>
+	<div id="content">
+		<div class="main">
+			<h1>Login</h1>
+			<div id="formwrapper">
+            <div id="provide">Please use to test:<br>Username: 4510, Password: 12345</div>
+			<form method="get" action="login.php" id="login">
+	<p>
+		<label for="username">Username:</label>
+		<input type="text" name="username" id="username">
+	</p>
+	<p>
+		<label for="password">Password: </label>
+		<input type="text" name="password" id="password">
+	</p>
+	<p>
+		<input type="submit" name="button" id="button" value="Submit" >
+	</p>
+</form>
+</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Not yet a member? <a href="registration.html">Sign up for a free account</a></p>
+	</div>
+</div>
+</body>
+</html>
